@@ -1,4 +1,10 @@
 /* Custom styles */
+
+strong,
+b {
+	font-weight: 700;
+}
+
 h1 {
     color: blue;
 }

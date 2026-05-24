@@ -27,3 +27,11 @@ add_action(
 		);
 	}
 );
+
+// Enqueue custom styles in the block editor.
+add_action(
+	'after_setup_theme',
+	function () {
+		add_editor_style( 'css/custom.css' );
+	}
+);

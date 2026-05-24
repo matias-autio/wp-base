@@ -10,6 +10,66 @@
           "name": "Brand Primary"
         }
       ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "\"Finlandica Headline\", sans-serif",
+          "name": "Finlandica Headline",
+          "slug": "finlandica-headline",
+          "fontFace": [
+            {
+              "fontFamily": "Finlandica Headline",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "src": ["file:./fonts/finlandica-headline-v1-latin-regular.woff2"]
+            },
+            {
+              "fontFamily": "Finlandica Headline",
+              "fontWeight": "700",
+              "fontStyle": "normal",
+              "src": ["file:./fonts/finlandica-headline-v1-latin-700.woff2"]
+            }
+          ]
+        },
+        {
+          "fontFamily": "\"Finlandica Text\", sans-serif",
+          "name": "Finlandica Text",
+          "slug": "finlandica-text",
+          "fontFace": [
+            {
+              "fontFamily": "Finlandica Text",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "src": ["file:./fonts/finlandica-text-v1-latin-regular.woff2"]
+            },
+            {
+              "fontFamily": "Finlandica Text",
+              "fontWeight": "400",
+              "fontStyle": "italic",
+              "src": ["file:./fonts/finlandica-text-v1-latin-italic.woff2"]
+            },
+            {
+              "fontFamily": "Finlandica Text",
+              "fontWeight": "700",
+              "fontStyle": "normal",
+              "src": ["file:./fonts/finlandica-text-v1-latin-700.woff2"]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "styles": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--finlandica-text)"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--finlandica-headline)"
+        }
+      }
     }
   }
 }
