@@ -1,0 +1,33 @@
+{
+    "name": "starter/wp-base",
+    "description": "WordPress development environment with Twenty Twenty-Five child theme",
+    "type": "project",
+    "repositories": [
+        {
+            "name": "wp-packages",
+            "type": "composer",
+            "url": "https://repo.wp-packages.org"
+        }
+    ],
+    "require": {
+        "php": ">=8.3",
+        "composer/installers": "^2.0",
+        "wp-theme/twentytwentyfive": "*"
+    },
+    "extra": {
+        "installer-paths": {
+            "wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ],
+            "wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ]
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}

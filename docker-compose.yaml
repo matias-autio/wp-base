@@ -15,7 +15,7 @@ services:
   wordpress:
     depends_on:
       - db
-    image: wordpress:latest
+    image: wordpress:7.0.0-php8.3-apache
     ports:
       - "8080:80"
     restart: always
@@ -25,8 +25,10 @@ services:
       WORDPRESS_DB_PASSWORD: wp_dev_password
       WORDPRESS_DB_NAME: wordpress_dev
     volumes:
-      # Mounts your local folder straight into the container's active theme path
+      # Mount both the parent theme (installed by Composer) and the child theme
+      - ./wp-content/themes/twentytwentyfive:/var/www/html/wp-content/themes/twentytwentyfive
       - ./wp-content/themes/twenty-twenty-five-child:/var/www/html/wp-content/themes/twenty-twenty-five-child
+      - ./vendor:/var/www/html/vendor
 
 volumes:
   db_data:
