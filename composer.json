@@ -24,10 +24,19 @@
             ]
         }
     },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "^3.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
+    },
     "config": {
         "optimize-autoloader": true,
         "allow-plugins": {
-            "composer/installers": true
+            "composer/installers": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
+    },
+    "scripts": {
+        "lint": "phpcs",
+        "lint:fix": "phpcbf"
     }
 }
