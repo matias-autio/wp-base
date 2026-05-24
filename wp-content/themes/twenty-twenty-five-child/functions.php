@@ -9,3 +9,13 @@ if ( file_exists( ABSPATH . '../vendor/autoload.php' ) ) {
 
 // Disable plugin and theme updates/installs via WP Admin (managed by Composer)
 define( 'DISALLOW_FILE_MODS', true );
+
+// Enqueue custom styles
+add_action( 'wp_enqueue_scripts', function () {
+    wp_enqueue_style(
+        'twenty-twenty-five-child-custom',
+        get_stylesheet_directory_uri() . '/css/custom.css',
+        array(),
+        filemtime( get_stylesheet_directory() . '/css/custom.css' )
+    );
+} );

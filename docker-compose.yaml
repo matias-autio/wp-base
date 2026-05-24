@@ -25,7 +25,8 @@ services:
       WORDPRESS_DB_PASSWORD: wp_dev_password
       WORDPRESS_DB_NAME: wordpress_dev
     volumes:
-      # Mount both the parent theme (installed by Composer) and the child theme
+      # Mount themes and plugins so only Composer-managed content is available
+      - ./wp-content/plugins:/var/www/html/wp-content/plugins
       - ./wp-content/themes/twentytwentyfive:/var/www/html/wp-content/themes/twentytwentyfive
       - ./wp-content/themes/twenty-twenty-five-child:/var/www/html/wp-content/themes/twenty-twenty-five-child
       - ./vendor:/var/www/html/vendor
